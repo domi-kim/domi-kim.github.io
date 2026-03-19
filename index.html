@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 첫 번째 웹사이트</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', '맑은 고딕', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕하세요! 👋</h1>
+
+    <div class="card">
+        <h2>내 첫 번째 웹사이트입니다</h2>
+        <p>이 페이지는 <span class="highlight">GitHub Pages</span>로 만들었습니다.</p>
+        <p>무료로, 10분 만에 완성했어요!</p>
+    </div>
+
+    <div class="card">
+        <h2>만든 사람</h2>
+        <ul>
+            <li>이름: 여러분의 이름</li>
+            <li>이메일: example@email.com</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>오늘 날짜</h2>
+        <p id="today"></p>
+    </div>
+
+    <script>
+        const today = new Date();
+        const dateStr = today.getFullYear() + '년 '
+            + (today.getMonth() + 1) + '월 '
+            + today.getDate() + '일';
+        document.getElementById('today').textContent = dateStr;
+    </script>
+</body>
+</html>
